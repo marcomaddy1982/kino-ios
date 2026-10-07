@@ -52,7 +52,7 @@ struct ListsView: View {
                 )
             }
         }
-        .navigationTitle("lists.navigationTitle")
+        .navigationTitle(LocalizedStringResource("lists.navigationTitle", bundle: #bundle))
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {

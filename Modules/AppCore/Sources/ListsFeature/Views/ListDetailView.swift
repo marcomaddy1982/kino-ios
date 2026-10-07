@@ -15,9 +15,9 @@ struct ListDetailView: View {
             case .success(let items):
                 if items.isEmpty {
                     ContentUnavailableView(
-                        String(localized: "listDetail.empty.title"),
+                        String(localized: "listDetail.empty.title", bundle: .module),
                         systemImage: "film",
-                        description: Text("listDetail.empty.subtitle")
+                        description: Text("listDetail.empty.subtitle", bundle: .module)
                     )
                 } else {
                     ScrollView {

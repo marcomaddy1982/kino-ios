@@ -1,6 +1,6 @@
 //
 //  RecentlyViewedViewModelFactory.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 27.03.26.
 //

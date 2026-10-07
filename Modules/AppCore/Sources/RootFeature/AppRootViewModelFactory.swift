@@ -1,6 +1,6 @@
 //
 //  AppRootViewModelFactory.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 04.06.26.
 //

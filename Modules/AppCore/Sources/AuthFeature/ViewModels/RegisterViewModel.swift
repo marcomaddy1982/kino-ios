@@ -37,16 +37,16 @@ final class RegisterViewModel {
 
     private func validate() -> String? {
         if password != confirmPassword {
-            return String(localized: "register.error.passwordMismatch")
+            return String(localized: "register.error.passwordMismatch", bundle: .module)
         }
         if password.count < 8 {
-            return String(localized: "register.error.passwordTooShort")
+            return String(localized: "register.error.passwordTooShort", bundle: .module)
         }
         if !password.contains(where: { $0.isUppercase }) {
-            return String(localized: "register.error.passwordNoUppercase")
+            return String(localized: "register.error.passwordNoUppercase", bundle: .module)
         }
         if !password.contains(where: { $0.isNumber }) {
-            return String(localized: "register.error.passwordNoNumber")
+            return String(localized: "register.error.passwordNoNumber", bundle: .module)
         }
         return nil
     }

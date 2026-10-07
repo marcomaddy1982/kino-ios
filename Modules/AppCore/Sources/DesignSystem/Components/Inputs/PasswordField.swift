@@ -1,11 +1,11 @@
 import SwiftUI
 
 public struct PasswordField: View {
-    let placeholder: LocalizedStringKey
+    let placeholder: LocalizedStringResource
     @Binding var text: String
     @State private var isVisible: Bool = false
 
-    public init(placeholder: LocalizedStringKey, text: Binding<String>) {
+    public init(placeholder: LocalizedStringResource, text: Binding<String>) {
         self.placeholder = placeholder
         self._text = text
     }
@@ -14,10 +14,10 @@ public struct PasswordField: View {
         HStack {
             Group {
                 if isVisible {
-                    TextField(placeholder, text: $text)
+                    TextField(String(localized: placeholder), text: $text)
                         .textContentType(.password)
                 } else {
-                    SecureField(placeholder, text: $text)
+                    SecureField(String(localized: placeholder), text: $text)
                         .textContentType(.password)
                 }
             }

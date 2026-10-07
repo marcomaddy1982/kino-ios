@@ -14,7 +14,7 @@ public enum DefaultTab: String, CaseIterable {
         }
     }
 
-    public var label: LocalizedStringKey {
+    public var label: LocalizedStringResource {
         switch self {
         case .discover:       return "tab.discover"
         case .search:         return "tab.search"

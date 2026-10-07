@@ -13,7 +13,7 @@ public enum AppearanceMode: String, CaseIterable {
         }
     }
 
-    public var label: LocalizedStringKey {
+    public var label: LocalizedStringResource {
         switch self {
         case .system: return "settings.appearance.system"
         case .light:  return "settings.appearance.light"

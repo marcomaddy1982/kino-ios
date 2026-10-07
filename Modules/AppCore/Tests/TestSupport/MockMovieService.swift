@@ -1,6 +1,6 @@
 //
 //  MockMovieService.swift
-//  NeuGelbTestTests
+//  KinoTests
 //
 //  Created by Marco Maddalena on 23.03.26.
 //

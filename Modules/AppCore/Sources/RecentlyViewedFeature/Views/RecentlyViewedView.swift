@@ -1,6 +1,6 @@
 //
 //  RecentlyViewedView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 27.03.26.
 //
@@ -24,8 +24,8 @@ public struct RecentlyViewedView: View {
             case .empty:
                 EmptyStateView(
                     icon: "clock.fill",
-                    title: "recentlyViewed.empty.title",
-                    message: "recentlyViewed.empty.subtitle"
+                    title: LocalizedStringResource("recentlyViewed.empty.title", bundle: #bundle),
+                    message: LocalizedStringResource("recentlyViewed.empty.subtitle", bundle: #bundle)
                 )
             case .success:
                 RecentlyResearchedView()
@@ -38,12 +38,12 @@ public struct RecentlyViewedView: View {
                 )
             }
         }
-        .navigationTitle("recentlyViewed.navigationTitle")
+        .navigationTitle(LocalizedStringResource("recentlyViewed.navigationTitle", bundle: #bundle))
         .modelContext(ModelContext(modelContainer))
         .toolbar {
             if case .success = viewModel.state {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(LocalizedStringKey("recentlyViewed.clearHistory")) {
+                    Button(LocalizedStringResource("recentlyViewed.clearHistory", bundle: #bundle)) {
                         viewModel.requestClearAll()
                     }
                     .foregroundColor(.red)
@@ -51,15 +51,15 @@ public struct RecentlyViewedView: View {
             }
         }
         .alert(
-            LocalizedStringKey("recentlyViewed.clearHistory.confirmTitle"),
+            LocalizedStringResource("recentlyViewed.clearHistory.confirmTitle", bundle: #bundle),
             isPresented: $viewModel.showClearConfirmation
         ) {
-            Button(LocalizedStringKey("recentlyViewed.clearHistory.confirmButton"), role: .destructive) {
+            Button(LocalizedStringResource("recentlyViewed.clearHistory.confirmButton", bundle: #bundle), role: .destructive) {
                 Task { await viewModel.clearAll() }
             }
-            Button("common.cancel", role: .cancel) {}
+            Button(LocalizedStringResource("common.cancel", bundle: #bundle), role: .cancel) {}
         } message: {
-            Text("recentlyViewed.clearHistory.confirmMessage")
+            Text("recentlyViewed.clearHistory.confirmMessage", bundle: .module)
         }
         .task {
             await viewModel.loadRecentlyViewed()

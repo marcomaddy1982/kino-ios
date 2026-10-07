@@ -1,10 +1,10 @@
 import SwiftUI
 
 public struct MetadataRowView: View {
-    let label: LocalizedStringKey
+    let label: LocalizedStringResource
     let value: String
 
-    public init(label: LocalizedStringKey, value: String) {
+    public init(label: LocalizedStringResource, value: String) {
         self.label = label
         self.value = value
     }

@@ -9,16 +9,21 @@
 		<key>UIImageName</key>
 		<string>SplashLogo</string>
 	</dict>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>it</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.neugelbtest.auth</string>
+			<string>com.kino.auth</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>neugelbtest</string>
+				<string>kino</string>
 			</array>
 		</dict>
 	</array>

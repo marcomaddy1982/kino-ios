@@ -1,6 +1,6 @@
 //
 //  MockNetworkClient.swift
-//  NeuGelbTestTests
+//  KinoTests
 //
 //  Created by Marco Maddalena on 22.03.26.
 //

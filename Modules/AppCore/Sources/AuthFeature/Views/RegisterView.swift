@@ -13,10 +13,10 @@ struct RegisterView: View {
                         .largeIconStyle()
                         .foregroundStyle(AppColors.primary)
 
-                    Text("register.title")
+                    Text("register.title", bundle: .module)
                         .titleStyle()
 
-                    Text("register.subtitle")
+                    Text("register.subtitle", bundle: .module)
                         .secondaryTextStyle()
                         .bodyStyle()
                         .multilineTextAlignment(.center)
@@ -25,23 +25,23 @@ struct RegisterView: View {
                 .padding(.top, 32)
 
                 VStack(spacing: 16) {
-                    TextField("register.field.name", text: $viewModel.name)
+                    TextField(String(localized: "register.field.name", bundle: .module), text: $viewModel.name)
                         .formFieldStyle()
                         .textContentType(.name)
                         .autocorrectionDisabled()
 
-                    TextField("register.field.email", text: $viewModel.email)
+                    TextField(String(localized: "register.field.email", bundle: .module), text: $viewModel.email)
                         .formFieldStyle()
                         .textContentType(.emailAddress)
                         .keyboardType(.emailAddress)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
 
-                    PasswordField(placeholder: "register.field.password", text: $viewModel.password)
+                    PasswordField(placeholder: LocalizedStringResource("register.field.password", bundle: #bundle), text: $viewModel.password)
 
-                    PasswordField(placeholder: "register.field.confirmPassword", text: $viewModel.confirmPassword)
+                    PasswordField(placeholder: LocalizedStringResource("register.field.confirmPassword", bundle: #bundle), text: $viewModel.confirmPassword)
 
-                    TextField("register.field.phoneNumber", text: $viewModel.phoneNumber)
+                    TextField(String(localized: "register.field.phoneNumber", bundle: .module), text: $viewModel.phoneNumber)
                         .formFieldStyle()
                         .textContentType(.telephoneNumber)
                         .keyboardType(.phonePad)
@@ -61,7 +61,7 @@ struct RegisterView: View {
                         .padding()
                 } else if viewModel.registerState != .success {
                     VStack {
-                        PrimaryActionButton(title: "register.action") {
+                        PrimaryActionButton(title: LocalizedStringResource("register.action", bundle: #bundle)) {
                             Task { await viewModel.register() }
                         }
                     }
@@ -71,7 +71,7 @@ struct RegisterView: View {
                 Spacer()
             }
         }
-        .navigationTitle("register.navigationTitle")
+        .navigationTitle(LocalizedStringResource("register.navigationTitle", bundle: #bundle))
         .navigationBarTitleDisplayMode(.inline)
     }
 }

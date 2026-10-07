@@ -1,6 +1,6 @@
 //
 //  MovieCardViewModel.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 23.03.26.
 //
@@ -26,9 +26,9 @@ public final class MovieCardViewModel {
     var title: String { movie.title }
     var releaseDate: String {
         guard let dateString = movie.releaseDate, !dateString.isEmpty else {
-            return String(localized: "common.toBeAnnounced")
+            return String(localized: "common.toBeAnnounced", bundle: .module)
         }
-        return dateString.toMonthDayYearString() ?? String(localized: "common.toBeAnnounced")
+        return dateString.toMonthDayYearString() ?? String(localized: "common.toBeAnnounced", bundle: .module)
     }
     var voteAverage: String { String(format: "%.1f", movie.voteAverage) }
     var posterPath: String? { movie.posterPath }
@@ -58,7 +58,7 @@ public final class MovieCardViewModel {
                 }
             } else {
                 if !Task.isCancelled {
-                    imageState = .error(String(localized: "common.failedToLoadPoster"))
+                    imageState = .error(String(localized: "common.failedToLoadPoster", bundle: .module))
                 }
             }
         }

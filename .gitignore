@@ -1,8 +1,5 @@
 # Xcode
 .DS_Store
-.xcodeproj/
-*.pbxproj
-*.xcworkspace/
 xcuserdata/
 DerivedData/
 *.build/
@@ -10,7 +7,7 @@ build/
 .swiftpm/
 
 # Configuration files
-NeuGelbTest/Config.xcconfig
+Kino/Config.xcconfig
 
 # IDE
 .idea/

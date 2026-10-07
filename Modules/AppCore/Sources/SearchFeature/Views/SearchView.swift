@@ -1,6 +1,6 @@
 //
 //  SearchView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 24.03.26.
 //
@@ -22,8 +22,8 @@ public struct SearchView: View {
             case .empty:
                 EmptyStateView(
                     icon: "magnifyingglass",
-                    title: "search.empty.title",
-                    message: "search.empty.subtitle"
+                    title: LocalizedStringResource("search.empty.title", bundle: #bundle),
+                    message: LocalizedStringResource("search.empty.subtitle", bundle: #bundle)
                 )
                 .offset(y: LayoutConstants.searchBarOffset)
             case .loading:
@@ -49,10 +49,10 @@ public struct SearchView: View {
                 )
             }
         }
-        .navigationTitle("search.navigationTitle")
+        .navigationTitle(LocalizedStringResource("search.navigationTitle", bundle: #bundle))
         .searchable(
             text: $viewModel.searchQuery,
-            prompt: Text("search.placeholder")
+            prompt: Text("search.placeholder", bundle: .module)
         )
     }
 }

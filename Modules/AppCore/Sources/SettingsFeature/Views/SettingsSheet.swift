@@ -51,7 +51,7 @@ struct DefaultTabPickerView: View {
                 }
             }
         }
-        .navigationTitle(LocalizedStringKey("settings.section.defaultTab"))
+        .navigationTitle(LocalizedStringResource("settings.section.defaultTab", bundle: #bundle))
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -66,15 +66,15 @@ struct CacheDetailView: View {
         List {
             Section {
                 HStack {
-                    Text(LocalizedStringKey("settings.cache.itemCountLabel"))
+                    Text("settings.cache.itemCountLabel", bundle: .module)
                     Spacer()
                     Text(viewModel.cacheItemCount == 0
-                         ? String(localized: "settings.cache.empty")
-                         : String(format: String(localized: "settings.cache.itemCount"), viewModel.cacheItemCount))
+                         ? String(localized: "settings.cache.empty", bundle: .module)
+                         : String(format: String(localized: "settings.cache.itemCount", bundle: .module), viewModel.cacheItemCount))
                         .foregroundColor(.secondary)
                 }
 
-                Text("settings.cache.description")
+                Text("settings.cache.description", bundle: .module)
                     .font(AppFonts.caption)
                     .foregroundColor(.secondary)
             }
@@ -83,12 +83,12 @@ struct CacheDetailView: View {
                 Button(role: .destructive) {
                     viewModel.requestClearCache()
                 } label: {
-                    Label(LocalizedStringKey("settings.cache.clear"), systemImage: "trash")
+                    Label(LocalizedStringResource("settings.cache.clear", bundle: #bundle), systemImage: "trash")
                 }
 
                 if viewModel.isCacheCleared {
                     Label {
-                        Text("settings.cache.cleared")
+                        Text("settings.cache.cleared", bundle: .module)
                     } icon: {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(AppColors.successGreen)
@@ -98,18 +98,18 @@ struct CacheDetailView: View {
                 }
             }
         }
-        .navigationTitle(LocalizedStringKey("settings.section.cache"))
+        .navigationTitle(LocalizedStringResource("settings.section.cache", bundle: #bundle))
         .navigationBarTitleDisplayMode(.inline)
         .alert(
-            LocalizedStringKey("settings.cache.confirmTitle"),
+            LocalizedStringResource("settings.cache.confirmTitle", bundle: #bundle),
             isPresented: $viewModel.showClearCacheConfirmation
         ) {
-            Button(LocalizedStringKey("settings.cache.confirmButton"), role: .destructive) {
+            Button(LocalizedStringResource("settings.cache.confirmButton", bundle: #bundle), role: .destructive) {
                 Task { await viewModel.clearCache() }
             }
-            Button("common.cancel", role: .cancel) {}
+            Button(LocalizedStringResource("common.cancel", bundle: #bundle), role: .cancel) {}
         } message: {
-            Text("settings.cache.confirmMessage")
+            Text("settings.cache.confirmMessage", bundle: .module)
         }
     }
 }

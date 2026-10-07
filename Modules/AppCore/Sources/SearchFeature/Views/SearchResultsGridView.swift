@@ -1,6 +1,6 @@
 //
 //  SearchResultsGridView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 25.03.26.
 //

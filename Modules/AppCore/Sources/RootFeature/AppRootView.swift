@@ -12,15 +12,15 @@ public struct AppRootView: View {
         if viewModel.isAuthenticated {
             TabView(selection: $viewModel.selectedTab) {
                 DiscoverTab()
-                    .tabItem { Label("tab.discover", systemImage: "list.bullet") }
+                    .tabItem { Label(LocalizedStringResource("tab.discover", bundle: #bundle), systemImage: "list.bullet") }
                     .tag(AppTab.discover)
 
                 SearchTab()
-                    .tabItem { Label("tab.search", systemImage: "magnifyingglass") }
+                    .tabItem { Label(LocalizedStringResource("tab.search", bundle: #bundle), systemImage: "magnifyingglass") }
                     .tag(AppTab.search)
 
                 RecentlyViewedTab()
-                    .tabItem { Label("tab.recentlyViewed", systemImage: "clock") }
+                    .tabItem { Label(LocalizedStringResource("tab.recentlyViewed", bundle: #bundle), systemImage: "clock") }
                     .tag(AppTab.recentlyViewed)
             }
         } else {

@@ -1,6 +1,6 @@
 //
 //  MovieDetailMetadataView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 24.03.26.
 //
@@ -14,8 +14,8 @@ struct MovieDetailMetadataView: View {
     
     var body: some View {
         VStack(spacing: 8) {
-            MetadataRowView(label: "movieDetail.releaseDate", value: releaseDate)
-            MetadataRowView(label: "movieDetail.runtime", value: runtime)
+            MetadataRowView(label: LocalizedStringResource("movieDetail.releaseDate", bundle: #bundle), value: releaseDate)
+            MetadataRowView(label: LocalizedStringResource("movieDetail.runtime", bundle: #bundle), value: runtime)
         }
     }
 }

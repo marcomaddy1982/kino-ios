@@ -1,6 +1,6 @@
 //
 //  MovieDetailAttributesView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 24.03.26.
 //
@@ -23,7 +23,7 @@ struct MovieDetailAttributesView: View {
         // Genres
         if hasGenres {
             VStack(alignment: .leading, spacing: 8) {
-                Text("movieDetail.genres")
+                Text("movieDetail.genres", bundle: .module)
                     .headlineStyle()
                 
                 VStack(alignment: .leading, spacing: 6) {
@@ -40,7 +40,7 @@ struct MovieDetailAttributesView: View {
         // Production Companies
         if hasProductionCompanies {
             VStack(alignment: .leading, spacing: 8) {
-                Text("movieDetail.productionCompanies")
+                Text("movieDetail.productionCompanies", bundle: .module)
                     .headlineStyle()
                 
                 VStack(alignment: .leading, spacing: 8) {
@@ -56,7 +56,7 @@ struct MovieDetailAttributesView: View {
         // Production Countries
         if hasProductionCountries {
             VStack(alignment: .leading, spacing: 8) {
-                Text("movieDetail.countries")
+                Text("movieDetail.countries", bundle: .module)
                     .headlineStyle()
                 
                 VStack(alignment: .leading, spacing: 6) {
@@ -73,7 +73,7 @@ struct MovieDetailAttributesView: View {
         // Spoken Languages
         if hasSpokenLanguages {
             VStack(alignment: .leading, spacing: 8) {
-                Text("movieDetail.languages")
+                Text("movieDetail.languages", bundle: .module)
                     .headlineStyle()
                 
                 VStack(alignment: .leading, spacing: 6) {

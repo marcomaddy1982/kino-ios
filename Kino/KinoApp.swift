@@ -1,6 +1,6 @@
 //
-//  NeuGelbTestApp.swift
-//  NeuGelbTest
+//  KinoApp.swift
+//  Kino
 //
 //  Created by Marco Maddalena on 23.03.26.
 //
@@ -10,7 +10,7 @@ import SettingsFeature
 import SwiftUI
 
 @main
-struct NeuGelbTestApp: App {
+struct KinoApp: App {
     @AppStorage("appearanceMode") private var appearanceMode: AppearanceMode = .system
 
     init() {

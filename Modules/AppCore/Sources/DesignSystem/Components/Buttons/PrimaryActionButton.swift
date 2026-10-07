@@ -1,10 +1,10 @@
 import SwiftUI
 
 public struct PrimaryActionButton: View {
-    let title: LocalizedStringKey
+    let title: LocalizedStringResource
     let action: () -> Void
 
-    public init(title: LocalizedStringKey, action: @escaping () -> Void) {
+    public init(title: LocalizedStringResource, action: @escaping () -> Void) {
         self.title = title
         self.action = action
     }

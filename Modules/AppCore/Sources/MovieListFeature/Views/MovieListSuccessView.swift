@@ -1,6 +1,6 @@
 //
 //  MovieListSuccessView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 27.03.26.
 //
@@ -42,7 +42,7 @@ struct MovieListSuccessView: View {
                 if viewModel.isPaginationLoading {
                     VStack(spacing: 12) {
                         ProgressView()
-                        Text("movieList.loadingMore")
+                        Text("movieList.loadingMore", bundle: .module)
                             .captionStyle()
                             .foregroundColor(.secondary)
                     }

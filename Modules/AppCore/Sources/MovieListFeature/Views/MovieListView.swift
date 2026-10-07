@@ -24,7 +24,7 @@ public struct MovieListView: View {
                 })
             }
         }
-        .navigationTitle("movieList.navigationTitle")
+        .navigationTitle(LocalizedStringResource("movieList.navigationTitle", bundle: #bundle))
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {

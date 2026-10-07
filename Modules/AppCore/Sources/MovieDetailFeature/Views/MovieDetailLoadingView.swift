@@ -1,6 +1,6 @@
 //
 //  MovieDetailLoadingView.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 27.03.26.
 //
@@ -13,7 +13,7 @@ struct MovieDetailLoadingView: View {
         VStack(spacing: 16) {
             ProgressView()
                 .scaleEffect(1.5)
-            Text("movieDetail.loading")
+            Text("movieDetail.loading", bundle: .module)
                 .headlineStyle()
                 .foregroundColor(.secondary)
         }

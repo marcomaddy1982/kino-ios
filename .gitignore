@@ -1,8 +1,5 @@
 # Xcode
 .DS_Store
-.xcodeproj/
-*.pbxproj
-*.xcworkspace/
 xcuserdata/
 DerivedData/
 *.build/

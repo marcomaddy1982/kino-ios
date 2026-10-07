@@ -1,8 +1,8 @@
 import Foundation
 import Observation
 
-private let accessTokenKey = "com.neugelbtest.accessToken"
-private let refreshTokenKey = "com.neugelbtest.refreshToken"
+private let accessTokenKey = "com.kino.accessToken"
+private let refreshTokenKey = "com.kino.refreshToken"
 
 public protocol SessionManagerProtocol {
     var accessToken: String? { get }

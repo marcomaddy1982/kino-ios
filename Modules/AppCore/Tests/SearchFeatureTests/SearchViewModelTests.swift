@@ -1,6 +1,6 @@
 //
 //  SearchViewModelTests.swift
-//  NeuGelbTestTests
+//  KinoTests
 //
 //  Created by Marco Maddalena on 25.03.26.
 //

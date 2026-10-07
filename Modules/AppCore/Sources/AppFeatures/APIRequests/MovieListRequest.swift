@@ -1,6 +1,6 @@
 //
 //  MovieListRequest.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 22.03.26.
 //

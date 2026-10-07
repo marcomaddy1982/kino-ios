@@ -1,6 +1,6 @@
 //
 //  MovieDetailViewModelTests.swift
-//  NeuGelbTestTests
+//  KinoTests
 //
 //  Created by Marco Maddalena on 24.03.26.
 //

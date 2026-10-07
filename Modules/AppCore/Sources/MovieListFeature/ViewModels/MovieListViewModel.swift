@@ -1,6 +1,6 @@
 //
 //  MovieListViewModel.swift
-//  NeuGelbTest
+//  Kino
 //
 //  Created by Marco Maddalena on 23.03.26.
 //

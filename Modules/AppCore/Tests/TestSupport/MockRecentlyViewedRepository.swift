@@ -1,6 +1,6 @@
 //
 //  MockRecentlyViewedRepository.swift
-//  NeuGelbTestTests
+//  KinoTests
 //
 //  Created by Marco Maddalena on 27.03.26.
 //

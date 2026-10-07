@@ -15,10 +15,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.neugelbtest.auth</string>
+			<string>com.kino.auth</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>neugelbtest</string>
+				<string>kino</string>
 			</array>
 		</dict>
 	</array>

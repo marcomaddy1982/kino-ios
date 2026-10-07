@@ -10,7 +10,7 @@ build/
 .swiftpm/
 
 # Configuration files
-NeuGelbTest/Config.xcconfig
+Kino/Config.xcconfig
 
 # IDE
 .idea/

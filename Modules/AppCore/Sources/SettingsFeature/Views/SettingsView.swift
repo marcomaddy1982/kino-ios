@@ -17,7 +17,7 @@ struct SettingsView: View {
             aboutSection
         }
         .preferredColorScheme(viewModel.appearanceMode.colorScheme)
-        .navigationTitle("settings.navigationTitle")
+        .navigationTitle(LocalizedStringResource("settings.navigationTitle", bundle: #bundle))
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {
@@ -34,7 +34,7 @@ struct SettingsView: View {
     // MARK: - Sections
 
     private var accountSection: some View {
-        Section(LocalizedStringKey("settings.section.account")) {
+        Section(LocalizedStringResource("settings.section.account", bundle: #bundle)) {
             switch authViewModel.state {
             case .loggedOut:
                 Text("settings.account.loggedOut")
@@ -44,14 +44,14 @@ struct SettingsView: View {
             case .loading:
                 HStack {
                     ProgressView()
-                    Text("settings.account.loading")
+                    Text("settings.account.loading", bundle: .module)
                         .foregroundColor(.secondary)
                         .font(AppFonts.caption)
                 }
 
             case .loggedIn:
                 accountProfileCard()
-                Button(LocalizedStringKey("settings.account.logout"), role: .destructive) {
+                Button(LocalizedStringResource("settings.account.logout", bundle: #bundle), role: .destructive) {
                     Task { await authViewModel.logout() }
                 }
 
@@ -86,7 +86,7 @@ struct SettingsView: View {
             }
 
             VStack(alignment: .leading, spacing: 3) {
-                Text(LocalizedStringKey("settings.account.session"))
+                Text("settings.account.session", bundle: .module)
                     .font(AppFonts.label)
                     .foregroundColor(.primary)
 
@@ -94,7 +94,7 @@ struct SettingsView: View {
                     Circle()
                         .fill(AppColors.successGreen)
                         .frame(width: 7, height: 7)
-                    Text("settings.account.sessionActive")
+                    Text("settings.account.sessionActive", bundle: .module)
                         .font(AppFonts.caption)
                         .foregroundColor(.secondary)
                 }
@@ -107,10 +107,10 @@ struct SettingsView: View {
 
     private var preferencesSection: some View {
         @Bindable var viewModel = viewModel
-        return Section(LocalizedStringKey("settings.section.preferences")) {
+        return Section(LocalizedStringResource("settings.section.preferences", bundle: #bundle)) {
             HStack(spacing: 12) {
                 iconBadge(systemName: "circle.lefthalf.filled", color: .purple)
-                Picker(LocalizedStringKey("settings.section.appearance"), selection: $viewModel.appearanceMode) {
+                Picker(LocalizedStringResource("settings.section.appearance", bundle: #bundle), selection: $viewModel.appearanceMode) {
                     ForEach(AppearanceMode.allCases, id: \.self) { mode in
                         Text(mode.label).tag(mode)
                     }
@@ -123,7 +123,7 @@ struct SettingsView: View {
             } label: {
                 HStack(spacing: 12) {
                     iconBadge(systemName: "star.fill", color: AppColors.primary)
-                    Text(LocalizedStringKey("settings.section.defaultTab"))
+                    Text("settings.section.defaultTab", bundle: .module)
                     Spacer()
                     Text(viewModel.currentDefaultTab.label)
                         .foregroundColor(.secondary)
@@ -143,11 +143,11 @@ struct SettingsView: View {
         } label: {
             HStack(spacing: 12) {
                 iconBadge(systemName: "internaldrive", color: .orange)
-                Text(LocalizedStringKey("settings.section.cache"))
+                Text("settings.section.cache", bundle: .module)
                 Spacer()
                 Text(viewModel.cacheItemCount == 0
-                     ? String(localized: "settings.cache.empty")
-                     : String(format: String(localized: "settings.cache.itemCount"), viewModel.cacheItemCount))
+                     ? String(localized: "settings.cache.empty", bundle: .module)
+                     : String(format: String(localized: "settings.cache.itemCount", bundle: .module), viewModel.cacheItemCount))
                     .foregroundColor(.secondary)
                     .font(AppFonts.caption)
                 Image(systemName: "chevron.right")
@@ -159,20 +159,24 @@ struct SettingsView: View {
     }
 
     private var aboutSection: some View {
-        Section(LocalizedStringKey("settings.section.about")) {
+        Section(LocalizedStringResource("settings.section.about", bundle: #bundle)) {
             HStack(spacing: 12) {
                 iconBadge(systemName: "info.circle.fill", color: Color(.systemGray))
-                LabeledContent(LocalizedStringKey("settings.about.version")) {
+                LabeledContent {
                     Text(viewModel.appVersion)
                         .foregroundColor(.secondary)
+                } label: {
+                    Text("settings.about.version", bundle: .module)
                 }
             }
 
             HStack(spacing: 12) {
                 iconBadge(systemName: "film.fill", color: AppColors.successGreen)
-                LabeledContent(LocalizedStringKey("settings.about.dataSource")) {
+                LabeledContent {
                     Text("TMDB")
                         .foregroundColor(.secondary)
+                } label: {
+                    Text("settings.about.dataSource", bundle: .module)
                 }
             }
         }

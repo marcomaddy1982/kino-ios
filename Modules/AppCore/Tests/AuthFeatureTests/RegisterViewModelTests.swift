@@ -54,7 +54,7 @@ struct RegisterViewModelTests {
 
         await sut.register()
 
-        #expect(sut.registerState == .error(String(localized: "register.error.passwordMismatch")))
+        #expect(sut.registerState == .error(String(localized: "register.error.passwordMismatch", bundle: .module)))
     }
 
     @Test("validation fails when password is too short")
@@ -66,7 +66,7 @@ struct RegisterViewModelTests {
 
         await sut.register()
 
-        #expect(sut.registerState == .error(String(localized: "register.error.passwordTooShort")))
+        #expect(sut.registerState == .error(String(localized: "register.error.passwordTooShort", bundle: .module)))
     }
 
     @Test("validation fails when password has no uppercase letter")
@@ -78,7 +78,7 @@ struct RegisterViewModelTests {
 
         await sut.register()
 
-        #expect(sut.registerState == .error(String(localized: "register.error.passwordNoUppercase")))
+        #expect(sut.registerState == .error(String(localized: "register.error.passwordNoUppercase", bundle: .module)))
     }
 
     @Test("validation fails when password has no number")
@@ -90,6 +90,6 @@ struct RegisterViewModelTests {
 
         await sut.register()
 
-        #expect(sut.registerState == .error(String(localized: "register.error.passwordNoNumber")))
+        #expect(sut.registerState == .error(String(localized: "register.error.passwordNoNumber", bundle: .module)))
     }
 }

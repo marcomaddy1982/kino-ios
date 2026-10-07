@@ -9,6 +9,11 @@
 		<key>UIImageName</key>
 		<string>SplashLogo</string>
 	</dict>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>it</string>
+	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

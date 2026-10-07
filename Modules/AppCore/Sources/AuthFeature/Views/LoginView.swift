@@ -16,10 +16,10 @@ struct LoginView: View {
                 .foregroundStyle(AppColors.primary)
                 .padding(.bottom, 8)
 
-            Text("auth.title")
+            Text("auth.title", bundle: .module)
                 .titleStyle()
 
-            Text("auth.subtitle")
+            Text("auth.subtitle", bundle: .module)
                 .secondaryTextStyle()
                 .bodyStyle()
                 .multilineTextAlignment(.center)
@@ -28,14 +28,14 @@ struct LoginView: View {
             Spacer()
 
             VStack(spacing: 16) {
-                TextField("auth.field.email", text: $viewModel.email)
+                TextField(String(localized: "auth.field.email", bundle: .module), text: $viewModel.email)
                     .formFieldStyle()
                     .textContentType(.emailAddress)
                     .keyboardType(.emailAddress)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
 
-                PasswordField(placeholder: "auth.field.password", text: $viewModel.password)
+                PasswordField(placeholder: LocalizedStringResource("auth.field.password", bundle: #bundle), text: $viewModel.password)
             }
             .padding(.horizontal, 24)
 
@@ -52,11 +52,11 @@ struct LoginView: View {
                     .padding()
             } else if viewModel.loginState != .success {
                 VStack(spacing: 12) {
-                    PrimaryActionButton(title: "auth.login") {
+                    PrimaryActionButton(title: LocalizedStringResource("auth.login", bundle: #bundle)) {
                         Task { await viewModel.login() }
                     }
 
-                    SecondaryActionButton(title: "auth.createAccount") {
+                    SecondaryActionButton(title: LocalizedStringResource("auth.createAccount", bundle: #bundle)) {
                         router.navigate(to: .register)
                     }
                 }

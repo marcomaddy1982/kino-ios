@@ -2,10 +2,10 @@ import SwiftUI
 
 public struct EmptyStateView: View {
     let icon: String
-    let title: LocalizedStringKey
-    let message: LocalizedStringKey
+    let title: LocalizedStringResource
+    let message: LocalizedStringResource
 
-    public init(icon: String, title: LocalizedStringKey, message: LocalizedStringKey) {
+    public init(icon: String, title: LocalizedStringResource, message: LocalizedStringResource) {
         self.icon = icon
         self.title = title
         self.message = message

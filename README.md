@@ -181,7 +181,7 @@ A dedicated `DesignSystem` module centralises colors (`AppColors`), typography (
 
 ## 9. Localisation
 
-All strings are managed via a single `Localizable.xcstrings` file (`en` + `it`). Keys follow a `feature.context` convention so copy can change without touching the codebase. Components use `LocalizedStringKey`; dynamic values are localised at the ViewModel layer via `String(localized:)`.
+Strings are managed in one `Localizable.xcstrings` catalog per module (`en` + `it`), looked up through that module's own bundle. Keys follow a `feature.context` convention so copy can change without touching the codebase. Components take `LocalizedStringResource`; dynamic values are localised at the ViewModel layer via `String(localized:)`.
 
 ### Benefits
 

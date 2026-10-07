@@ -24,21 +24,60 @@ let package = Package(
         .package(path: "../Networking")
     ],
     targets: [
-        .target(name: "DesignSystem", swiftSettings: defaultIsolationSettings),
+        .target(
+            name: "DesignSystem",
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
         .target(name: "Models", swiftSettings: defaultIsolationSettings),
-        .target(name: "AppFeatures", dependencies: ["Models", "Networking"], swiftSettings: defaultIsolationSettings),
-        .target(name: "AuthFeature", dependencies: ["Models", "DesignSystem", "AppFeatures"], swiftSettings: defaultIsolationSettings),
-        .target(name: "MovieListFeature", dependencies: ["Models", "DesignSystem", "AppFeatures"], swiftSettings: defaultIsolationSettings),
+        .target(
+            name: "AppFeatures",
+            dependencies: ["Models", "Networking"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
+        .target(
+            name: "AuthFeature",
+            dependencies: ["Models", "DesignSystem", "AppFeatures"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
+        .target(
+            name: "MovieListFeature",
+            dependencies: ["Models", "DesignSystem", "AppFeatures"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
         .target(
             name: "MovieDetailFeature",
             dependencies: ["Models", "DesignSystem", "AppFeatures"],
             resources: [.process("Resources/Localizable.xcstrings")],
             swiftSettings: defaultIsolationSettings
         ),
-        .target(name: "RecentlyViewedFeature", dependencies: ["Models", "DesignSystem", "AppFeatures", "MovieListFeature"], swiftSettings: defaultIsolationSettings),
-        .target(name: "SearchFeature", dependencies: ["Models", "DesignSystem", "AppFeatures", "MovieListFeature"], swiftSettings: defaultIsolationSettings),
-        .target(name: "ListsFeature", dependencies: ["Models", "DesignSystem", "AppFeatures", "MovieListFeature", "MovieDetailFeature"], swiftSettings: defaultIsolationSettings),
-        .target(name: "SettingsFeature", dependencies: ["Models", "DesignSystem", "AppFeatures"], swiftSettings: defaultIsolationSettings),
+        .target(
+            name: "RecentlyViewedFeature",
+            dependencies: ["Models", "DesignSystem", "AppFeatures", "MovieListFeature"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
+        .target(
+            name: "SearchFeature",
+            dependencies: ["Models", "DesignSystem", "AppFeatures", "MovieListFeature"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
+        .target(
+            name: "ListsFeature",
+            dependencies: ["Models", "DesignSystem", "AppFeatures", "MovieListFeature", "MovieDetailFeature"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
+        .target(
+            name: "SettingsFeature",
+            dependencies: ["Models", "DesignSystem", "AppFeatures"],
+            resources: [.process("Resources/Localizable.xcstrings")],
+            swiftSettings: defaultIsolationSettings
+        ),
         .target(
             name: "RootFeature",
             dependencies: [
@@ -46,6 +85,7 @@ let package = Package(
                 "AuthFeature", "ListsFeature", "MovieDetailFeature", "MovieListFeature",
                 "RecentlyViewedFeature", "SearchFeature", "SettingsFeature"
             ],
+            resources: [.process("Resources/Localizable.xcstrings")],
             swiftSettings: defaultIsolationSettings
         ),
 

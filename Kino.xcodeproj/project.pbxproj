@@ -10,7 +10,6 @@
 		089DE929B41B46CEAA4FABF1 /* KinoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E48645332930D5D5D2FC710 /* KinoApp.swift */; };
 		0B8E995D9D4ED58D32742B61 /* AppFeatures in Frameworks */ = {isa = PBXBuildFile; productRef = 16C8143713324737FE360A97 /* AppFeatures */; };
 		160C5457351C535DAF3B4A5E /* SettingsFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 84E25C75537DAEED022BC95B /* SettingsFeature */; };
-		228E78BD690F0C934E3A8DE2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5B146E0030E1FDDBEC911DDE /* Localizable.xcstrings */; };
 		6ACC86EE54F8A4959D40CD83 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7A59DF69EFFC4C81229C59B2 /* Networking */; };
 		772437EDDD54BBF1324B56D4 /* RootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = B7F2D071F518420D3B2FC80B /* RootFeature */; };
 		AD511C773468926F553EAE0F /* DISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C146C485FD50645854FA43E1 /* DISetup.swift */; };
@@ -21,7 +20,6 @@
 		042B918417407916C914D2D2 /* AppCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppCore; path = Modules/AppCore; sourceTree = SOURCE_ROOT; };
 		2F8AAB5B61C9E6C5E2F0238A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		3B8175BFED92E6AD01765798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5B146E0030E1FDDBEC911DDE /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8BB00DBC8AE6C39A79E520C9 /* Kino.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E48645332930D5D5D2FC710 /* KinoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinoApp.swift; sourceTree = "<group>"; };
 		C146C485FD50645854FA43E1 /* DISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DISetup.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				3B8175BFED92E6AD01765798 /* Assets.xcassets */,
 				2F8AAB5B61C9E6C5E2F0238A /* Config.xcconfig */,
 				8E48645332930D5D5D2FC710 /* KinoApp.swift */,
-				5B146E0030E1FDDBEC911DDE /* Localizable.xcstrings */,
 				F2F1E672B2A77D70C7246F60 /* DependencyInjection */,
 			);
 			path = Kino;
@@ -156,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D18D0D96004C86AE711082 /* Assets.xcassets in Resources */,
-				228E78BD690F0C934E3A8DE2 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,8 @@ extension Int {
         let hours = self / 60
         let minutes = self % 60
         return hours > 0
-            ? String(localized: "common.runtime.hoursMinutes \(hours) \(minutes)")
-            : String(localized: "common.runtime.minutesOnly \(minutes)")
+            ? String(localized: "common.runtime.hoursMinutes \(hours) \(minutes)", bundle: .module)
+            : String(localized: "common.runtime.minutesOnly \(minutes)", bundle: .module)
     }
 
     /// Formats integer as USD currency (e.g., "$100,000,000")

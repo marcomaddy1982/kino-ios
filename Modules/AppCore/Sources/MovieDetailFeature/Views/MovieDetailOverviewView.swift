@@ -13,7 +13,7 @@ struct MovieDetailOverviewView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("movieDetail.overview")
+            Text("movieDetail.overview", bundle: .module)
                 .headlineStyle()
             
             Text(overview)

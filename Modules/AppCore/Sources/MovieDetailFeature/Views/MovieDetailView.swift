@@ -31,7 +31,7 @@ public struct MovieDetailView: View {
                 })
             }
         }
-        .navigationTitle("movieDetail.navigationTitle")
+        .navigationTitle(LocalizedStringResource("movieDetail.navigationTitle", bundle: #bundle))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

@@ -13,7 +13,7 @@ struct MovieDetailLoadingView: View {
         VStack(spacing: 16) {
             ProgressView()
                 .scaleEffect(1.5)
-            Text("movieDetail.loading")
+            Text("movieDetail.loading", bundle: .module)
                 .headlineStyle()
                 .foregroundColor(.secondary)
         }
